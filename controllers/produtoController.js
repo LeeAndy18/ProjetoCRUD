@@ -24,6 +24,7 @@ const getProduto = async (req, res, next) => {
 const addProduto = async (req,res,next) => {
     try {
         const data = req.body;
+        console.log(data);
         const created = await produtoData.createProduto(data);
         res.send(created);
     } catch (error) {
